@@ -1,0 +1,11 @@
+<span class="component-delineation"></span>
+
+<h1>Topings List</h1>
+<div *ngFor="let topping of toppings">
+  <label>
+    {{ topping }}
+    <input type="checkbox" [value]="topping" (change)="checkValue($event)" />
+  </label>
+</div>
+
+<h2>Special requests</h2>

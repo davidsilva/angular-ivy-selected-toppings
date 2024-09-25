@@ -1,0 +1,17 @@
+<h1>Welcome to MHE !!!</h1>
+<input
+  size="60"
+  #request
+  type="text"
+  placeholder="Enter any special requests here."
+/>
+<button>Add</button>
+
+<h2>Selected Toppings:</h2>
+<ol>
+  <li *ngFor="let topping of toppings">{{ topping }}</li>
+</ol>
+
+<span class="component-delineation"></span>
+<hr />
+<app-child (toppingsChange)="setSelectedToppings($event)"></app-child>
